@@ -11,7 +11,7 @@ chown -R www-data:www-data /srv/nodejs/app
 
 echo "Running npm..."
 cd /srv/nodejs/app
-/usr/local/bin/npm install | tee /var/log/npm_install.log
+/usr/local/bin/npm install
 
 PORT=${APP_PORT:-8080}
 export PORT
