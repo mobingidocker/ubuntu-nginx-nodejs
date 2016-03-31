@@ -12,9 +12,9 @@ test:
     - docker build -t ci/base .
     - docker build -t ci/test -f test/Dockerfile .
     - test/run_and_wait_supervisord.sh
-    - curl -vf localhost
-# deployment:
-#   release:
-#     branch: ["master", "4.4", "5.9"]
-#     commands:
-#       - test/push_image_to_hub.sh
+    - curl -vf localhost | grep Node
+deployment:
+  release:
+    branch: ["master", "0.10", "0.12", "4.4", "5.9"]
+    commands:
+      - test/push_image_to_hub.sh
