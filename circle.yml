@@ -15,6 +15,15 @@ test:
     - timeout --foreground 10 test/check_response.sh
 deployment:
   release:
-    branch: ["master", "0.10", "0.12", "4.4", "5.9", "5.10"]
+    branch:
+      - "master"
+      - "0.10"
+      - "0.12"
+      - "4.4"
+      - "5.9"
+      - "5.10"
+      - "5.11"
+      - "6.0"
+      - "6.1"
     commands:
       - test/push_image_to_hub.sh
