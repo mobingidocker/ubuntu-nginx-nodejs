@@ -2,7 +2,7 @@
 set -e
 
 ## Stable
-NAVE_NODEVER=4.4.4
+NAVE_NODEVER=4.4.5
 
 git clone --depth 1 https://github.com/isaacs/nave.git ${NAVE_DIR}
 /opt/nave/bin/nave install ${NAVE_NODEVER}
