@@ -11,7 +11,7 @@ chown -R www-data:www-data /srv/nodejs/app
 
 echo "Running npm..."
 cd /srv/nodejs/app
-/usr/local/bin/npm install
+/usr/local/bin/npm install --unsafe-perm
 
 PORT=${APP_PORT:-8080}
 export PORT
